@@ -39,6 +39,30 @@ Review date: 2026-09-06 · Scope: `server.js`, `public/`, tests. Follows OWASP T
 
 No card data, no passwords in clear, no third-party trackers without cookie consent (GA4/Meta Pixel load only after both server-side tag config AND stored consent).
 
+## Secret-scan audit & guardrails (2026-09-06)
+
+Audit of the full committed tree and history (single commit `4052682`):
+
+- **Pattern scan** (provider keys, Stripe, AWS, GitHub/Slack tokens, private-key
+  blocks, JWTs, credentialed DB URLs) — **no findings**.
+- **Entropy scan** over all tracked files — all hits benign (lockfile integrity
+  hashes, JPEG bytes, `.env.example` placeholders).
+- **Tracked-file review** — no logs, no `.env`, no `db.json`, no key files; the
+  only credentialed-looking URL in docs is a `hooks.zapier.com/...` placeholder.
+
+**Guardrails in place (secret scanning on GitHub itself requires GitHub
+Advanced Security for private repos, which this repo does not have):**
+
+- `scripts/scan-secrets.js` — pattern scanner (17 credential families, with an
+  ALLOW list for placeholders/docs). Run manually: `node scripts/scan-secrets.js --all`.
+- `.githooks/pre-push` + `git config core.hooksPath .githooks` — every `git push`
+  runs the scan and aborts on a hit.
+- CI runs the same scan as a dedicated `secret-scan` job on every push/PR.
+
+To move secret scanning to GitHub's own (free for public repos / paid for
+private), either make the repo public or enable GitHub Advanced Security, then:
+Settings → Code security → Secret scanning + Push protection.
+
 ## Residual risks / recommendations
 - Rate limiter is in-memory per process — behind multiple instances, front it with the reverse proxy’s limits.
 - Set a strict `CSP` (already default) and keep `report-only` mode in mind if adding external scripts.
