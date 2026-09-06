@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#24113f" />
+  <title>Astritsa — AI αστρολογική εμπειρία | Ημερήσιες προβλέψεις, Αριθμολογία, Ταρώ</title>
+  <meta name="description" content="Αστρίτσα: ημερήσιες AI αστρολογικές προβλέψεις για τα 12 ζώδια με πραγματικό αστρικό ημερολόγιο, αριθμολογία, Ταρώ, ανάγνωση ελληνικού καφέ και oracle κάρτες. Ελληνικά πρώτα, για ενήλικες 18+." />
+  <meta name="keywords" content="αστρολογία, ζώδια, ημερήσια πρόβλεψη, αριθμολογία, ταρώ, καφεμαντεία, oracle, AI, Αστρίτσα, astrology Greece" />
+  <link rel="canonical" href="https://astritsa.com/" />
+  <meta property="og:site_name" content="Astritsa" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="el_GR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:url" content="https://astritsa.com/" />
+  <meta property="og:title" content="Astritsa — AI αστρολογική εμπειρία" />
+  <meta property="og:description" content="Ημερήσιες AI προβλέψεις ανά ζώδιο με πραγματικό αστρικό ημερολόγιο, αριθμολογία, Ταρώ και καφεμαντεία. Ελληνικά πρώτα." />
+  <meta property="og:image" content="https://astritsa.com/astritsa-logo.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Astritsa — AI αστρολογική εμπειρία" />
+  <meta name="twitter:description" content="Ημερήσιες AI προβλέψεις ανά ζώδιο, αριθμολογία, Ταρώ και καφεμαντεία. Ελληνικά πρώτα." />
+  <meta name="twitter:image" content="https://astritsa.com/astritsa-logo.jpg" />
+  <link rel="alternate" hreflang="el" href="https://astritsa.com/" />
+  <link rel="alternate" hreflang="en" href="https://astritsa.com/?lang=en" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="icon" type="image/jpeg" href="/astritsa-logo.jpg" />
+  <link rel="apple-touch-icon" href="/astritsa-logo.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://astritsa.com/#org",
+        "name": "Astritsa",
+        "url": "https://astritsa.com/",
+        "logo": "https://astritsa.com/astritsa-logo.jpg",
+        "description": "Greek-first AI astrology entertainment web app for adults.",
+        "areaServed": "GR",
+        "knowsLanguage": ["el", "en"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://astritsa.com/#website",
+        "url": "https://astritsa.com/",
+        "name": "Astritsa",
+        "inLanguage": "el",
+        "publisher": { "@id": "https://astritsa.com/#org" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://astritsa.com/zodiac/{search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Ζώδια — Zodiac signs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1,  "name": "Κριός — Aries",       "url": "https://astritsa.com/zodiac/aries" },
+          { "@type": "ListItem", "position": 2,  "name": "Ταύρος — Taurus",     "url": "https://astritsa.com/zodiac/taurus" },
+          { "@type": "ListItem", "position": 3,  "name": "Δίδυμοι — Gemini",    "url": "https://astritsa.com/zodiac/gemini" },
+          { "@type": "ListItem", "position": 4,  "name": "Καρκίνος — Cancer",   "url": "https://astritsa.com/zodiac/cancer" },
+          { "@type": "ListItem", "position": 5,  "name": "Λέων — Leo",          "url": "https://astritsa.com/zodiac/leo" },
+          { "@type": "ListItem", "position": 6,  "name": "Παρθένος — Virgo",     "url": "https://astritsa.com/zodiac/virgo" },
+          { "@type": "ListItem", "position": 7,  "name": "Ζυγός — Libra",        "url": "https://astritsa.com/zodiac/libra" },
+          { "@type": "ListItem", "position": 8,  "name": "Σκορπιός — Scorpio",   "url": "https://astritsa.com/zodiac/scorpio" },
+          { "@type": "ListItem", "position": 9,  "name": "Τοξότης — Sagittarius", "url": "https://astritsa.com/zodiac/sagittarius" },
+          { "@type": "ListItem", "position": 10, "name": "Αιγόκερως — Capricorn", "url": "https://astritsa.com/zodiac/capricorn" },
+          { "@type": "ListItem", "position": 11, "name": "Υδροχόος — Aquarius",  "url": "https://astritsa.com/zodiac/aquarius" },
+          { "@type": "ListItem", "position": 12, "name": "Ιχθύες — Pisces",      "url": "https://astritsa.com/zodiac/pisces" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Astritsa home">
+      <img class="brand-mark" src="/astritsa-logo.jpg" alt="Astritsa logo" width="46" height="46" />
+      <span><strong>Astritsa</strong><small data-i18n="tagline">AI αστρική εμπειρία, ελληνικά πρώτα</small></span>
+    </a>
+    <nav id="mainNav" class="nav" aria-label="Main navigation">
+      <a href="#home" data-i18n="navHome">Αρχική</a>
+      <a href="#dailyPanel"><span class="nav-ico"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><span data-i18n="navToday">Σήμερα</span></a>
+      <a href="#quicknav"><span class="nav-ico"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span><span data-i18n="navWeek">Εβδομάδα</span></a>
+      <a href="#quicknav"><span class="nav-ico"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span><span data-i18n="navMonth">Μήνας</span></a>
+      <a href="#zodiac"><span class="nav-ico"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span><span data-i18n="navZodiac">Ζώδιο</span></a>
+      <a href="#dailyPanel"><span class="nav-ico"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span><span data-i18n="navHoroscope">Ωροσκόπος</span></a>
+      <a href="#numbers" data-i18n="navNumbers">Αριθμολογία</a>
+      <a href="#topics"><span class="nav-ico"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1.5"/></svg></span><span data-i18n="navSources">Θέματα</span></a>
+      <a href="#pricing" data-i18n="headerPricing">Τιμολόγηση</a>
+      <a href="#account" data-i18n="navAccount">Λογαριασμός</a>
+      <a href="#coffee" data-i18n="navCoffee">Καφές</a>
+      <a href="#oracle" data-i18n="navOracle">Oracle</a>
+      <a href="#contact" data-i18n="navContact">Επικοινωνία</a>
+      <a id="adminNav" href="#admin" data-i18n="navAdmin" hidden>Admin</a>
+    </nav>
+    <div class="auth-nav">
+      <a class="pill-button" href="#account" data-i18n="headerSignin">Σύνδεση</a>
+      <a class="pill-button" href="#account" data-i18n="headerSignup">Εγγραφή</a>
+      <a class="pill-button" href="#pricing" data-i18n="headerPricing">Τιμολόγηση</a>
+    </div>
+    <button id="langToggle" class="pill-button" type="button">EN</button>
+    <button id="navToggle" class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <section id="home" class="hero section-grid">
+      <div class="hero-copy glass">
+        <div class="eyebrow" data-i18n="eyebrow">AI • real-time source consensus • astrology entertainment</div>
+        <h1 data-i18n="heroTitle">Η Αστρίτσα συνδυάζει τα άστρα με AI και διαφάνεια.</h1>
+        <p data-i18n="heroText">AI προβλέψεις που αντλούν κοινά μοτίβα από τις διαμορφωμένες αστρολογικές πηγές.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#account" data-i18n="createAccount">Δημιούργησε λογαριασμό</a>
+          <button id="heroDemoBtn" class="secondary-button" type="button" data-i18n="demoBtn">Μπες με demo λογαριασμό</button>
+          <button id="dailyNow" class="secondary-button" type="button" data-i18n="dailyNow">Σημερινή AI πρόβλεψη</button>
+        </div>
+        <p class="microcopy" data-i18n="legalNote" hidden></p>
+      </div>
+
+      <aside class="profile-card glass" aria-labelledby="profileTitle">
+        <h2 id="profileTitle" data-i18n="profileTitle">Το αστρικό σου προφίλ</h2>
+        <form id="profileForm" class="form-grid">
+          <label><span data-i18n="nameLabel">Όνομα</span><input id="name" name="name" autocomplete="given-name" placeholder="π.χ. Μαρία" /></label>
+          <label><span data-i18n="birthDateLabel">Ημερομηνία γέννησης</span><input id="birthDate" name="birthDate" type="date" /></label>
+          <label><span data-i18n="birthTimeLabel">Ώρα</span><input id="birthTime" name="birthTime" type="time" /></label>
+          <label><span data-i18n="cityLabel">Πόλη</span><input id="city" name="city" autocomplete="off" placeholder="Αθήνα" /></label>
+          <button class="primary-button wide" type="submit" data-i18n="saveProfile">Αποθήκευση προφίλ</button>
+        </form>
+        <div id="profileSummary" class="profile-summary"></div>
+      </aside>
+    </section>
+
+    <section id="zodiac" class="glass feature-section">
+      <div class="section-heading">
+        <span class="orb">✨</span>
+        <div><p class="eyebrow" data-i18n="zodiacEyebrow">Ζώδια</p><h2 data-i18n="zodiacTitle">Εξερεύνησε τα Ζώδια</h2></div>
+      </div>
+      <div id="zodiacGrid" class="zodiac-grid"></div>
+    </section>
+
+    <section id="topics" class="glass feature-section">
+      <div class="section-heading">
+        <span class="orb">📈</span>
+        <div><p class="eyebrow" data-i18n="topicsEyebrow">Τάσεις</p><h2 data-i18n="topicsTitle">Δημοφιλή Θέματα</h2></div>
+      </div>
+      <div id="topicsGrid" class="topics-grid"></div>
+      <div id="trendReading" class="reading-content empty"></div>
+    </section>
+
+    <section id="quicknav" class="glass feature-section">
+      <div class="section-heading">
+        <span class="orb">🧭</span>
+        <div><p class="eyebrow" data-i18n="quickEyebrow">Πλοήγηση</p><h2 data-i18n="quickTitle">Γρήγορη Πλοήγηση</h2></div>
+      </div>
+      <div id="quickGrid" class="quick-grid"></div>
+    </section>
+
+    <section id="cta" class="glass feature-section cta">
+      <div class="section-heading">
+        <span class="orb">💜</span>
+        <div><h2 data-i18n="ctaTitle">Έτοιμος να εξερευνήσεις το κοσμικό σου βιογραφικό;</h2><p data-i18n="ctaText">Δημιούργησε το προφίλ σου για να ξεκλειδώσεις εξατομικευμένες ημερήσιες προβλέψεις, αναγνώσεις ωροσκόπου και αριθμολογικές επισημάνσεις.</p></div>
+      </div>
+      <a class="primary-button wide" href="#account" data-i18n="ctaBtn">Ξεκίνα το Ταξίδι σου</a>
+    </section>
+
+    <section id="faq" class="glass feature-section" aria-label="FAQ">
+      <div class="section-heading">
+        <span class="orb">❓</span>
+        <div><p class="eyebrow">FAQ</p><h2 data-i18n="faqTitle">Συχνές Ερωτήσεις</h2></div>
+      </div>
+      <div class="faq-list">
+        <details open><summary data-i18n="faqQ1">Πώς παράγονται οι καθημερινές προβλέψεις;</summary><p data-i18n="faqA1">Κάθε μέρα υπολογίζουμε τις πραγματικές θέσεις των πλανητών με αστρονομικό ημερολόγιο (efemerides) και οι AI προβλέψεις συνδυάζουν αυτές τις διαμορφώσεις με τους κλασικούς αστρολογικούς κανόνες για κάθε ζώδιο και οίκο.</p></details>
+        <details><summary data-i18n="faqQ2">Είναι οι προβλέψεις αποθηκευμένο ωροσκόπιο;</summary><p data-i18n="faqA2">Όχι. Οι αναγνώσεις παράγονται σε πραγματικό χρόνο από AI με βάση τον σημερινό ουρανό — δεν πρόκειται για στατικό κείμενο που επαναλαμβάνεται.</p></details>
+        <details><summary data-i18n="faqQ3">Είναι δωρεάν η Αστρίτσα;</summary><p data-i18n="faqA3">Ναι, το βασικό πακέτο με ημερήσια πρόβλεψη και αριθμολογία είναι δωρεάν. Τα πακέτα Plus και Pro ξεκλειδώνουν απεριόριστες αναγνώσεις και προηγμένα εργαλεία.</p></details>
+        <details><summary data-i18n="faqQ4">Χρησιμοποιούνται τα δεδομένα μου;</summary><p data-i18n="faqA4">Συλλέγουμε μόνο ό,τι χρειάζεται για τον λογαριασμό σου. Οι συναινέσεις GDPR είναι υποχρεωτικές και μπορείς ανά πάσα στιγμή να εξαγάγεις ή να διαγράψεις τα δεδομένα σου.</p></details>
+      </div>
+    </section>
+
+    <section id="account" class="glass feature-section">
+      <div class="section-heading">
+        <span class="orb">🔐</span>
+        <div><p class="eyebrow" data-i18n="accountEyebrow">secure account</p><h2 data-i18n="accountTitle">Σύνδεση, εγγραφή και συνδρομή</h2></div>
+      </div>
+      <div id="authArea" class="auth-grid">
+        <div class="panel-card demo-login-card">
+          <h3 data-i18n="demoTitle">Γρήγορη δοκιμή</h3>
+          <p data-i18n="demoText">Χρησιμοποίησε έτοιμο demo λογαριασμό χωρίς email/password.</p>
+          <button id="demoLoginBtn" class="primary-button wide" type="button" data-i18n="demoBtn">Μπες με demo λογαριασμό</button>
+        </div>
+        <form id="signinForm" class="panel-card form-grid">
+          <h3 data-i18n="signinTitle">Σύνδεση</h3>
+          <label><span>Email</span><input id="signinEmail" type="email" autocomplete="email" required /></label>
+          <label><span data-i18n="passwordLabel">Κωδικός</span><input id="signinPassword" type="password" autocomplete="current-password" required /></label>
+          <button class="secondary-button wide" type="submit" data-i18n="signinBtn">Σύνδεση</button>
+        </form>
+        <form id="signupForm" class="panel-card form-grid">
+          <h3 data-i18n="signupTitle">Νέος λογαριασμός</h3>
+          <label><span data-i18n="nameLabel">Όνομα</span><input id="signupName" autocomplete="name" /></label>
+          <label><span>Email</span><input id="signupEmail" type="email" autocomplete="email" required /></label>
+          <label><span data-i18n="passwordLabel">Κωδικός</span><input id="signupPassword" type="password" autocomplete="new-password" required /><small id="passwordPolicyHint" class="password-hint" data-i18n="passwordPolicy">Τουλάχιστον 8 χαρακτήρες, με ένα κεφαλαίο, έναν αριθμό και ένα σύμβολο.</small></label>
+          <label><span data-i18n="birthDateLabel">Ημερομηνία γέννησης</span><input id="signupBirthDate" type="date" required /></label>
+          <div class="checks">
+            <label><input id="ageConfirmed" type="checkbox" required /> <span data-i18n="ageConfirm">Επιβεβαιώνω ότι είμαι 18+.</span></label>
+            <label><input id="termsAccepted" type="checkbox" required /> <span><span data-i18n="acceptTerms">Αποδέχομαι τους</span> <a href="/terms.html" target="_blank" data-i18n="termsLink">Οροι Χρήσης</a>.</span></label>
+            <label><input id="privacyAccepted" type="checkbox" required /> <span><span data-i18n="acceptPrivacy">Έχω διαβάσει την</span> <a href="/privacy.html" target="_blank" data-i18n="privacyLink">Πολιτική Απορρήτου</a>.</span></label>
+            <label><input id="refundAccepted" type="checkbox" required /> <span><span data-i18n="acceptRefund">Αποδέχομαι την</span> <a href="/refund.html" target="_blank" data-i18n="refundLink">Πολιτική Επιστροφών</a>.</span></label>
+            <label><input id="aiConsent" type="checkbox" required /> <span data-i18n="aiConsent">Κατανοώ ότι οι προβλέψεις παράγονται από AI για ψυχαγωγία.</span></label>
+          </div>
+          <button class="primary-button wide" type="submit" data-i18n="signupBtn">Εγγραφή</button>
+        </form>
+      </div>
+      <div id="accountPanel" class="account-panel" hidden>
+        <div id="accountSummary" class="panel-card"></div>
+        <div class="panel-actions">
+          <button id="subscribeBtn" class="primary-button" type="button" data-i18n="subscribeBtn">Συνδρομή με Stripe</button>
+          <button id="portalBtn" class="secondary-button" type="button" data-i18n="portalBtn">Διαχείριση συνδρομής</button>
+          <button id="exportBtn" class="secondary-button" type="button" data-i18n="exportBtn">Εξαγωγή δεδομένων</button>
+          <button id="deleteBtn" class="secondary-button danger" type="button" data-i18n="deleteBtn">Διαγραφή λογαριασμού</button>
+          <button id="signoutBtn" class="secondary-button" type="button" data-i18n="signoutBtn">Αποσύνδεση</button>
+        </div>
+      </div>
+      <div id="setupNotice" class="setup-notice"></div>
+    </section>
+
+    <section id="pricing" class="glass feature-section">
+      <div class="section-heading">
+        <img class="orb" src="/astritsa-logo.jpg" alt="" width="48" height="48" />
+        <div><p class="eyebrow" data-i18n="pricingEyebrow">τιμολόγηση</p><h2 data-i18n="pricingTitle">Τιμολόγηση</h2></div>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card"><b data-i18n="planFree">Δωρεάν</b><p data-i18n="planFreeText">Ημερήσια πρόβλεψη και αριθμολογία</p><a class="secondary-button wide" href="#account" data-i18n="planFreeCta">Ξεκίνα δωρεάν</a></div>
+        <div class="pricing-card featured"><b data-i18n="planPlus">Plus</b><span class="price" data-i18n="pricePlus">4,99€ / μήνα</span><p data-i18n="planPlusText">Απεριόριστες AI προβλέψεις, ιστορικό και όλα τα widgets.</p><a class="primary-button wide" href="#account" data-i18n="subscribeBtn">Συνδρομή με Stripe</a></div>
+        <div class="pricing-card"><b data-i18n="planPro">Pro</b><span class="price" data-i18n="pricePro">9,99€ / μήνα</span><p data-i18n="planProText">Προσωπικός αστρολογικός οδηγός, προτεραιότητα και προηγμένη ανάλυση.</p><a class="secondary-button wide" href="#account" data-i18n="planProCta">Δες το Pro</a></div>
+      </div>
+    </section>
+
+    <section class="dashboard section-grid">
+      <article class="glass reading-panel" id="dailyPanel">
+        <div class="section-heading">
+          <span class="orb">☀</span>
+          <div><p class="eyebrow" data-i18n="todayLabel">Σήμερα</p><h2 data-i18n="dailyTitle">AI ημερήσια αστρική πρόβλεψη</h2></div>
+        </div>
+        <div id="dailyReading" class="reading-content empty" data-i18n="dailyEmpty">Συνδέσου και πάτησε για real-time AI πρόβλεψη με source consensus.</div>
+      </article>
+
+      <article class="glass quick-card" id="surprisePanel">
+        <div class="section-heading compact"><span class="orb">🌙</span><h2 data-i18n="surpriseTitle">Έκπληξη της Αστρίτσας</h2></div>
+        <div id="surpriseReading" class="reading-content empty" data-i18n="surpriseEmpty">AI moon portal, μάντρα και ελληνικό σύμβολο ημέρας.</div>
+        <button id="surpriseBtn" class="secondary-button wide" type="button" data-i18n="surpriseBtn">Άνοιξε έκπληξη</button>
+      </article>
+    </section>
+
+    <section id="coffee" class="glass feature-section">
+      <div class="section-heading">
+        <span class="orb">☕</span>
+        <div><p class="eyebrow" data-i18n="coffeeEyebrow">AI coffee reading</p><h2 data-i18n="coffeeTitle">Διάλεξε φλιτζάνι και άσε την Αστρίτσα να πιει τον καφέ.</h2></div>
+      </div>
+      <div class="coffee-layout">
+        <div>
+          <div id="cupGrid" class="cup-grid" role="listbox" aria-label="Coffee cup selection"></div>
+          <div class="coffee-mode" role="radiogroup" aria-label="Coffee reading mode">
+            <label class="mode-option selected"><input type="radio" name="coffeeMode" value="general" checked /> <span data-i18n="coffeeGeneral">Πες μου τι βλέπεις γενικά</span></label>
+            <label class="mode-option"><input type="radio" name="coffeeMode" value="specific" /> <span data-i18n="coffeeSpecific">Θες να ρωτήσεις κάτι συγκεκριμένο?</span></label>
+          </div>
+          <label id="coffeeQuestionWrap" class="question-box" hidden><span data-i18n="questionLabel">Τι θέλεις να ρωτήσεις;</span><textarea id="coffeeQuestion" rows="3" placeholder="π.χ. Θα ανοίξει ο δρόμος για αυτή τη σχέση;"></textarea></label>
+          <button id="drinkBtn" class="primary-button drink-button" type="button" data-i18n="drinkButton">Πάτα εδώ για να πιεις τον καφέ σου</button>
+        </div>
+        <div class="cup-stage" aria-live="polite">
+          <div id="selectedCupArt" class="big-cup classic"><span></span></div>
+          <div id="drinkProgress" class="drink-progress"><i></i></div>
+          <div id="coffeeReading" class="reading-content empty" data-i18n="coffeeEmpty">Η AI ανάγνωση θα εμφανιστεί μετά την τελευταία γουλιά.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="numbers" class="section-grid">
+      <article class="glass feature-section tight">
+        <div class="section-heading compact"><span class="orb">🔢</span><h2 data-i18n="numbersTitle">AI Αριθμολογία</h2></div>
+        <p data-i18n="numbersText">Η AI υπολογίζει και εξηγεί μονοπάτι ζωής, πεπρωμένο ονόματος, ψυχή και προσωπική ημέρα.</p>
+        <button id="numbersBtn" class="primary-button wide" type="button" data-i18n="numbersBtn">Υπολόγισε με AI</button>
+        <div id="numbersReading" class="reading-content empty"></div>
+      </article>
+
+      <article class="glass feature-section tight">
+        <div class="section-heading compact"><span class="orb">💞</span><h2 data-i18n="compatTitle">AI Συναστρία Lite</h2></div>
+        <div class="compat-row">
+          <label><span data-i18n="signA">Ζώδιο Α</span><select id="signA"></select></label>
+          <label><span data-i18n="signB">Ζώδιο Β</span><select id="signB"></select></label>
+        </div>
+        <button id="compatBtn" class="secondary-button wide" type="button" data-i18n="compatBtn">Δες χημεία με AI</button>
+        <div id="compatReading" class="reading-content empty"></div>
+      </article>
+    </section>
+
+    <section id="oracle" class="glass feature-section">
+      <div class="section-heading">
+        <span class="orb">🃏</span>
+        <div><p class="eyebrow" data-i18n="oracleEyebrow">AI Greek Oracle</p><h2 data-i18n="oracleTitle">Τράβηγμα 3 καρτών με AI ερμηνεία</h2></div>
+      </div>
+      <div class="oracle-tools">
+        <label class="question-box grow"><span data-i18n="oracleIntent">Πρόθεση</span><input id="oracleIntent" placeholder="αγάπη, δουλειά, μονοπάτι..." /></label>
+        <button id="oracleBtn" class="primary-button" type="button" data-i18n="oracleBtn">Άνοιξε κάρτες</button>
+      </div>
+      <div id="oracleCards" class="oracle-cards"></div>
+      <div id="oracleReading" class="reading-content empty"></div>
+    </section>
+
+    <section id="contact" class="glass feature-section">
+      <div class="section-heading">
+        <span class="orb">✉️</span>
+        <div><p class="eyebrow" data-i18n="contactEyebrow">support</p><h2 data-i18n="contactTitle">Φόρμα επικοινωνίας</h2></div>
+      </div>
+      <form id="contactForm" class="contact-grid">
+        <label><span data-i18n="nameLabel">Όνομα</span><input id="contactName" /></label>
+        <label><span>Email</span><input id="contactEmail" type="email" required /></label>
+        <label><span data-i18n="topicLabel">Θέμα</span><input id="contactTopic" /></label>
+        <label class="full"><span data-i18n="messageLabel">Μήνυμα</span><textarea id="contactMessage" rows="5" required></textarea></label>
+        <label class="full check-line"><input id="contactConsent" type="checkbox" required /> <span data-i18n="contactConsent">Συμφωνώ να χρησιμοποιηθεί το email μου για απάντηση στο αίτημά μου.</span></label>
+        <button class="primary-button" type="submit" data-i18n="sendContact">Αποστολή</button>
+      </form>
+    </section>
+
+    <section id="admin" class="glass feature-section" hidden>
+      <div class="section-heading">
+        <span class="orb">🛠</span>
+        <div><p class="eyebrow">Admin</p><h2 data-i18n="adminTitle">Διαχείριση πηγών, χρηστών και μηνυμάτων</h2></div>
+      </div>
+      <div id="adminConfig" class="panel-card"></div>
+      <form id="sourceForm" class="source-form">
+        <input id="sourceName" placeholder="Source name" />
+        <input id="sourceUrl" placeholder="https://official-source.example/rss" required />
+        <select id="sourceLanguage"><option value="any">Any</option><option value="el">Greek</option><option value="en">English</option></select>
+        <button class="primary-button" type="submit" data-i18n="addSource">Προσθήκη πηγής</button>
+      </form>
+      <div id="sourcesList" class="admin-list"></div>
+      <h3 data-i18n="usersTitle">Χρήστες</h3>
+      <div id="usersList" class="admin-list"></div>
+      <h3 data-i18n="messagesTitle">Μηνύματα</h3>
+      <div id="messagesList" class="admin-list"></div>
+    </section>
+
+    <section class="glass feature-section roadmap">
+      <div class="section-heading">
+        <span class="orb">🚀</span>
+        <div><p class="eyebrow" data-i18n="fullStackEyebrow">Production scaffold</p><h2 data-i18n="whatBuiltTitle">Τι άλλαξε για launch-readiness</h2></div>
+      </div>
+      <div class="feature-list">
+        <div><b>AI</b><span data-i18n="aiFeature">Όλες οι προβλέψεις καλούν AI API και προαιρετικά real-time πηγές που ορίζει ο admin.</span></div>
+        <div><b>Auth</b><span data-i18n="authFeature">Signup/signin, sessions, 18+, υποχρεωτική αποδοχή Terms/Privacy/AI notice.</span></div>
+        <div><b>Stripe</b><span data-i18n="stripeFeature">Checkout, billing portal και webhook endpoints χωρίς mock checkout.</span></div>
+        <div><b>Compliance</b><span data-i18n="complianceFeature">GDPR export/delete, cookie banner, AI transparency, contact consent.</span></div>
+      </div>
+      <p class="microcopy"><a href="/terms.html" target="_blank" data-i18n="termsLink">Οροι Χρήσης</a> · <a href="/privacy.html" target="_blank" data-i18n="privacyLink">Πολιτική Απορρήτου</a></p>
+    </section>
+  </main>
+
+  <div id="cookieBanner" class="cookie-banner" hidden role="dialog" aria-label="Cookie consent">
+    <p data-i18n="cookieText">Χρησιμοποιούμε μόνο απαραίτητα cookies για σύνδεση. Προαιρετικά analytics/marketing ενεργοποιούνται μόνο με συγκατάθεση.</p>
+    <div id="cookieOptions" class="cookie-options" hidden>
+      <label><input id="cookieAnalytics" type="checkbox" /> <span data-i18n="cookieAnalytics">Analytics — στατιστικά επισκεψιμότητας (Google Analytics)</span></label>
+      <label><input id="cookieMarketing" type="checkbox" /> <span data-i18n="cookieMarketing">Marketing — προσωποποιημένες διαφημίσεις (Meta Pixel)</span></label>
+    </div>
+    <div class="cookie-actions">
+      <button id="cookiesEssential" class="secondary-button" type="button" data-i18n="cookiesEssential">Μόνο απαραίτητα</button>
+      <button id="cookiesCustomize" class="secondary-button" type="button" data-i18n="cookiesCustomize">Προσαρμογή</button>
+      <button id="cookiesSave" class="primary-button" type="button" data-i18n="cookiesSave" hidden>Αποθήκευση επιλογών</button>
+      <button id="cookiesAll" class="primary-button" type="button" data-i18n="cookiesAll">Αποδοχή όλων</button>
+    </div>
+  </div>
+
+  <footer class="footer"><span class="footer-brand"><img src="/astritsa-logo.jpg" alt="" width="22" height="22" /> Astritsa</span><span data-i18n="footerText">Πρωτότυπη AI εφαρμογή ψυχαγωγίας</span><nav class="footer-links" aria-label="Footer"><a href="/#contact" class="footer-link" data-i18n="footerSupport">Υποστήριξη</a><a href="/terms.html" class="footer-link" data-i18n="termsLink">Οροι Χρήσης</a><a href="/privacy.html" class="footer-link" data-i18n="privacyLink">Πολιτική Απορρήτου</a><a href="/refund.html" class="footer-link" data-i18n="refundLink">Πολιτική Επιστροφών</a><button id="cookieSettingsBtn" class="footer-link" type="button" data-i18n="cookieSettings">Ρυθμίσεις cookies</button></nav></footer>
+  <div class="site-disclaimer" data-i18n="legalNote">Οι AI προβλέψεις, η αστρολογία, η καφεμαντεία, η αριθμολογία και οι κάρτες oracle παρέχονται αποκλειστικά ως ψυχαγωγικό περιεχόμενο και δεν αποτελούν ιατρική, ψυχολογική, νομική, οικονομική ή άλλη επαγγελματική συμβουλή.</div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Πώς παράγονται οι καθημερινές προβλέψεις στην Αστρίτσα;", "acceptedAnswer": { "@type": "Answer", "text": "Κάθε μέρα υπολογίζονται οι πραγματικές θέσεις των πλανητών με αστρονομικό ημερολόγιο και οι AI προβλέψεις συνδυάζουν αυτές τις διαμορφώσεις με τους κλασικούς αστρολογικούς κανόνες για κάθε ζώδιο και οίκο." } },
+      { "@type": "Question", "name": "Είναι οι προβλέψεις της Αστρίτσας αποθηκευμένο ωροσκόπιο;", "acceptedAnswer": { "@type": "Answer", "text": "Όχι. Οι αναγνώσεις παράγονται σε πραγματικό χρόνο από AI με βάση τον σημερινό ουρανό, όχι στατικό κείμενο." } },
+      { "@type": "Question", "name": "Είναι δωρεάν η Αστρίτσα;", "acceptedAnswer": { "@type": "Answer", "text": "Ναι, το βασικό πακέτο με ημερήσια πρόβλεψη και αριθμολογία είναι δωρεάν· τα Plus (4,99€/μήνα) και Pro (9,99€/μήνα) ξεκλειδώνουν περισσότερα εργαλεία." } },
+      { "@type": "Question", "name": "Πώς προστατεύονται τα προσωπικά δεδομένα στην Αστρίτσα;", "acceptedAnswer": { "@type": "Answer", "text": "Οι συναινέσεις GDPR είναι υποχρεωτικές, τα δεδομένα μπορούν να εξαχθούν ή να διαγραφούν ανά πάσα στιγμή από τον λογαριασμό, και η υπηρεσία είναι αυστηρά ψυχαγωγική για ενήλικες 18+." } }
+    ]
+  }
+  </script>
+  <script src="/app.js"></script>
+</body>
+</html>

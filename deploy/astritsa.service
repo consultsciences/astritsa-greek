@@ -1,0 +1,44 @@
+# Astritsa systemd unit — bare-metal / VM deployment.
+#
+# 1. Install to /opt/astritsa (npm ci --omit=dev; node must be on PATH).
+# 2. Create the env file (see DEPLOY.md for every variable):
+#      sudo cp /opt/astritsa/.env.example /etc/astritsa.env
+#      sudo chmod 600 /etc/astritsa.env   # edit with your real secrets
+# 3. Create the service user:
+#      sudo useradd --system --home /opt/astritsa --shell /usr/sbin/nologin astritsa
+#      sudo chown -R astritsa:astritsa /opt/astritsa /opt/astritsa/data
+# 4. Install and start:
+#      sudo cp deploy/astritsa.service /etc/systemd/system/astritsa.service
+#      sudo systemctl daemon-reload && sudo systemctl enable --now astritsa
+#      sudo systemctl status astritsa
+#
+# Health check from the host:
+#      curl -fsS http://127.0.0.1:3000/api/health
+
+[Unit]
+Description=Astritsa — Greek-first AI astrology web app
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=astritsa
+Group=astritsa
+WorkingDirectory=/opt/astritsa
+EnvironmentFile=/etc/astritsa.env
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/node server.js
+Restart=always
+RestartSec=5
+
+# Basic hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+# The app must be able to write its database:
+ReadWritePaths=/opt/astritsa/data
+ProtectHome=true
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
