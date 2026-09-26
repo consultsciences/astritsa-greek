@@ -146,7 +146,6 @@ If omitted, messages are still stored and visible to admins.
 - `GET /api/signs`
 - `POST /api/auth/signup`
 - `POST /api/auth/signin`
-- `POST /api/auth/demo`
 - `POST /api/auth/signout`
 - `GET /api/auth/me`
 - `POST /api/profile`

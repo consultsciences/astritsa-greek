@@ -846,35 +846,6 @@ async function api(req, res, pathname, url) {
     return sendJson(res, 200, { user: publicUser(user), ready: hasMandatoryConsents(user) }, { 'Set-Cookie': sessionCookie(req, token, SESSION_DAYS * 86400) });
   }
 
-  if (req.method === 'POST' && pathname === '/api/auth/demo') {
-    const db = readDb();
-    const demoId = id('demo_').slice(0, 18);
-    const user = {
-      id: id('usr_'),
-      role: 'user',
-      isDemo: true,
-      name: 'Demo Astritsa',
-      email: `${demoId}@astritsa.local`,
-      passwordHash: createPasswordHash(crypto.randomBytes(16).toString('hex')),
-      birthDate: '', birthTime: '12:00', city: 'Αθήνα', zodiac: null, lifePath: null,
-      ageConfirmedAt: nowISO(),
-      termsAcceptedAt: nowISO(), termsVersion: TERMS_VERSION,
-      privacyAcceptedAt: nowISO(), privacyVersion: PRIVACY_VERSION,
-      refundAcceptedAt: nowISO(),
-      aiConsentAt: nowISO(),
-      marketingConsent: false,
-      cookieConsent: { essential: true, analytics: false, marketing: false, updatedAt: nowISO() },
-      subscription: { status: 'trialing', plan: 'demo' },
-      createdAt: nowISO(), updatedAt: nowISO()
-    };
-    updateProfileFields(user, { birthDate: '1992-05-13', birthTime: '12:00', city: 'Αθήνα', name: 'Demo Astritsa' });
-    db.users.push(user);
-    db.consentLogs.push({ id: id('con_'), userId: user.id, type: 'demo-account-auto-consent', termsVersion: TERMS_VERSION, privacyVersion: PRIVACY_VERSION, createdAt: nowISO() });
-    const token = createSession(db, req, user.id);
-    writeDb(db);
-    return sendJson(res, 201, { user: publicUser(user), demo: true, ready: hasMandatoryConsents(user) }, { 'Set-Cookie': sessionCookie(req, token, SESSION_DAYS * 86400) });
-  }
-
   if (req.method === 'POST' && pathname === '/api/auth/signout') {
     const db = readDb();
     const token = parseCookies(req).astritsa_session;

@@ -4,7 +4,7 @@ const $$ = (sel) => [...document.querySelectorAll(sel)];
 const copy = {
   el: {
     tagline:'AI αστρική εμπειρία, ελληνικά πρώτα', navHome:'Αρχική', navAccount:'Λογαριασμός', navCoffee:'Καφές', navNumbers:'Αριθμολογία', navOracle:'Oracle', navContact:'Επικοινωνία', navAdmin:'Admin', navToday:'Σήμερα', navWeek:'Εβδομάδα', navMonth:'Μήνας', navZodiac:'Ζώδιο', navHoroscope:'Ωροσκόπος', navSources:'Θέματα', headerSignin:'Σύνδεση', headerSignup:'Εγγραφή', headerPricing:'Τιμολόγηση',
-    eyebrow:'AI • real-time source consensus • astrology entertainment', heroTitle:'Αστρολογία, αριθμολογία, Ταρώ και πες μου το φλυτζάνι μέσω AI', heroText:'AI προβλέψεις που αντλούν κοινά μοτίβα από τις διαμορφωμένες αστρολογικές πηγές.', createAccount:'Δημιούργησε λογαριασμό', demoTitle:'Γρήγορη δοκιμή', demoText:'Χρησιμοποίησε έτοιμο demo λογαριασμό χωρίς email/password.', demoBtn:'Μπες με demo λογαριασμό', dailyNow:'Σημερινή AI πρόβλεψη', legalNote:'Οι AI προβλέψεις, η αστρολογία, η καφεμαντεία, η αριθμολογία και οι κάρτες oracle παρέχονται αποκλειστικά ως ψυχαγωγικό περιεχόμενο και δεν αποτελούν ιατρική, ψυχολογική, νομική, οικονομική ή άλλη επαγγελματική συμβουλή.',
+    eyebrow:'AI • real-time source consensus • astrology entertainment', heroTitle:'Αστρολογία, αριθμολογία, Ταρώ και πες μου το φλυτζάνι μέσω AI', heroText:'AI προβλέψεις που αντλούν κοινά μοτίβα από τις διαμορφωμένες αστρολογικές πηγές.', createAccount:'Δημιούργησε λογαριασμό', dailyNow:'Σημερινή AI πρόβλεψη', legalNote:'Οι AI προβλέψεις, η αστρολογία, η καφεμαντεία, η αριθμολογία και οι κάρτες oracle παρέχονται αποκλειστικά ως ψυχαγωγικό περιεχόμενο και δεν αποτελούν ιατρική, ψυχολογική, νομική, οικονομική ή άλλη επαγγελματική συμβουλή.',
     profileTitle:'Το αστρολογικό σου προφίλ', zodiacEyebrow:'Ζώδια', zodiacTitle:'Εξερεύνησε τα Ζώδια',    topicsEyebrow:'Τάσεις', topicsTitle:'Δημοφιλή Θέματα', trendEmpty:'Πάτησε ένα θέμα για real-time AI ανάλυση με source consensus.', quickEyebrow:'Πλοήγηση', quickTitle:'Γρήγορη Πλοήγηση', ctaTitle:'Έτοιμος να εξερευνήσεις το κοσμικό σου βιογραφικό;', ctaText:'Δημιούργησε το προφίλ σου για να ξεκλειδώσεις εξατομικευμένες ημερήσιες προβλέψεις, αναγνώσεις ωροσκόπου και αριθμολογικές επισημάνσεις.', ctaBtn:'Ξεκίνα το Ταξίδι σου', nameLabel:'Όνομα', birthDateLabel:'Ημερομηνία γέννησης', birthTimeLabel:'Ώρα', cityLabel:'Πόλη', saveProfile:'Αποθήκευση προφίλ',
     accountEyebrow:'secure account', accountTitle:'Σύνδεση, εγγραφή και συνδρομή', signinTitle:'Σύνδεση', signupTitle:'Νέος λογαριασμός', passwordLabel:'Κωδικός', passwordPolicy:'Τουλάχιστον 8 χαρακτήρες, με ένα κεφαλαίο, έναν αριθμό και ένα σύμβολο.', signinBtn:'Σύνδεση', signupBtn:'Εγγραφή', ageConfirm:'Επιβεβαιώνω ότι είμαι 18+.', acceptTerms:'Αποδέχομαι τους', termsLink:'Οροι Χρήσης', acceptPrivacy:'Έχω διαβάσει την', privacyLink:'Πολιτική Απορρήτου', acceptRefund:'Αποδέχομαι την', refundLink:'Πολιτική Επιστροφών', footerSupport:'Υποστήριξη', aiConsent:'Κατανοώ ότι οι προβλέψεις παράγονται από AI για ψυχαγωγία.', subscribeBtn:'Συνδρομή με Stripe', portalBtn:'Διαχείριση συνδρομής', exportBtn:'Εξαγωγή δεδομένων', deleteBtn:'Διαγραφή λογαριασμού', signoutBtn:'Αποσύνδεση',
     todayLabel:'Σήμερα', dailyTitle:'AI ημερήσια αστρική πρόβλεψη', dailyEmpty:'Συνδέσου και πάτησε για real-time AI πρόβλεψη με source consensus.', surpriseTitle:'Έκπληξη της Αστρίτσας', surpriseEmpty:'AI moon portal, μάντρα και ελληνικό σύμβολο ημέρας.', surpriseBtn:'Άνοιξε έκπληξη',
@@ -19,7 +19,7 @@ const copy = {
   },
   en: {
     tagline:'AI astral experience, Greek first', navHome:'Home', navAccount:'Account', navCoffee:'Coffee', navNumbers:'Numerology', navOracle:'Oracle', navContact:'Contact', navAdmin:'Admin', navToday:'Today', navWeek:'Week', navMonth:'Month', navZodiac:'Zodiac', navHoroscope:'Horoscope', navSources:'Sources', headerSignin:'Sign in', headerSignup:'Sign up', headerPricing:'Pricing',
-    eyebrow:'AI • real-time source consensus • astrology entertainment', heroTitle:'Astrology, numerology, Tarot and tell me the cup through AI', heroText:'AI readings that identify common patterns from configured astrology sources.', createAccount:'Create account', demoTitle:'Quick trial', demoText:'Use a ready demo account without email/password.', demoBtn:'Enter with demo account', dailyNow:'Today’s AI reading', legalNote:'Adult entertainment content. Not professional advice.',
+    eyebrow:'AI • real-time source consensus • astrology entertainment', heroTitle:'Astrology, numerology, Tarot and tell me the cup through AI', heroText:'AI readings that identify common patterns from configured astrology sources.', createAccount:'Create account', dailyNow:'Today’s AI reading', legalNote:'Adult entertainment content. Not professional advice.',
     profileTitle:'Your astrological profile', zodiacEyebrow:'Zodiac', zodiacTitle:'Explore the Zodiac',    topicsEyebrow:'Trends', topicsTitle:'Popular Topics', trendEmpty:'Tap a topic for a real-time AI analysis with source consensus.', quickEyebrow:'Navigation', quickTitle:'Quick Navigation', ctaTitle:'Ready to explore your cosmic biography?', ctaText:'Create your profile to unlock personalized daily predictions, horoscope readings and numerological insights.', ctaBtn:'Start Your Journey', nameLabel:'Name', birthDateLabel:'Birth date', birthTimeLabel:'Time', cityLabel:'City', saveProfile:'Save profile',
     accountEyebrow:'secure account', accountTitle:'Sign in, sign up and subscription', signinTitle:'Sign in', signupTitle:'New account', passwordLabel:'Password', passwordPolicy:'At least 8 characters with one uppercase letter, one number and one special character.', signinBtn:'Sign in', signupBtn:'Sign up', ageConfirm:'I confirm I am 18+.', acceptTerms:'I accept the', termsLink:'Terms of Use', acceptPrivacy:'I have read the', privacyLink:'Privacy Policy', acceptRefund:'I accept the', refundLink:'Refund Policy', footerSupport:'Support', aiConsent:'I understand readings are AI-generated for entertainment.', subscribeBtn:'Subscribe with Stripe', portalBtn:'Manage subscription', exportBtn:'Export data', deleteBtn:'Delete account', signoutBtn:'Sign out',
     todayLabel:'Today', dailyTitle:'AI daily astral reading', dailyEmpty:'Sign in and press for a real-time AI reading with source consensus.', surpriseTitle:'Astritsa surprise', surpriseEmpty:'AI moon portal, mantra and Greek day symbol.', surpriseBtn:'Open surprise',
@@ -263,17 +263,6 @@ async function runOracle(){
   } catch(err){ renderError(el, err); }
 }
 
-async function demoLogin(){
-  try{
-    const {user, ready=true}=await api('/api/auth/demo',{});
-    state.user=user; state.ready=ready;
-    toast(t('saved'));
-    trackAnalytics('sign_up',{ method:'demo' }); trackMarketing('CompleteRegistration');
-    renderAccount(); renderProfile();
-    location.hash='#coffee';
-  }catch(err){ toast(err.message); }
-}
-
 let adminModule=null;
 // Route-level code splitting: the admin panel is imported on demand, only for
 // signed-in admins — regular visitors never download this module.
@@ -316,8 +305,6 @@ $('#topicsGrid').addEventListener('click', e=>{
 });
 // zodiac cards now navigate to dedicated /zodiac/:sign pages
 $$('input[name="coffeeMode"]').forEach(input=>input.addEventListener('change',syncCoffeeMode));
-$('#demoLoginBtn').addEventListener('click', demoLogin);
-$('#heroDemoBtn').addEventListener('click', demoLogin);
 $('#dailyNow').addEventListener('click',()=>runReading('/api/daily',$('#dailyReading'), profilePayload()));
 $('#surpriseBtn').addEventListener('click',()=>runReading('/api/surprise',$('#surpriseReading'), {}));
 $('#drinkBtn').addEventListener('click',drinkCoffee);

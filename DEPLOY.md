@@ -173,11 +173,13 @@ Then set `APP_ORIGIN=https://astritsa.com` so Stripe return URLs, cookie flags, 
 
   `aiConfigured:false` there means the AI env vars are missing/mis-set even though the app is up.
 - **Uptime monitoring (UptimeRobot, Better Uptime, Grafana…):** monitor `https://astritsa.com/api/health`, expect HTTP 200.
-- **Deep smoke (optional):** a demo login + one reading exercises auth → consents → ephemeris → AI provider → source aggregation:
+- **Deep smoke (optional):** a real signup + one reading exercises auth → consents → ephemeris → AI provider → source aggregation:
 
   ```bash
-  curl -s -c /tmp/c -X POST https://astritsa.com/api/auth/demo
-  curl -s -b /tmp/c -X POST https://astritsa.com/api/daily -H 'Content-Type: application/json' -d '{"language":"en"}'
+    curl -s -c /tmp/c -X POST https://greek.astritsa.com/api/auth/signup \
+      -H 'Content-Type: application/json' \
+      -d '{"email":"smoke@example.com","password":"Str0ng-Pass!","name":"Smoke","birthDate":"1992-05-13","termsAccepted":true,"privacyAccepted":true,"aiConsent":true}'
+  curl -s -b /tmp/c -X POST https://greek.astritsa.com/api/daily -H 'Content-Type: application/json' -d '{"language":"en"}'
   ```
 
   Expect `{"reading":{...}}` with `title`, `summary`, `sourcesUsed`.

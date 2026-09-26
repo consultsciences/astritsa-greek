@@ -118,17 +118,12 @@ test('POST /api/trends validates the query', async () => {
   assert.equal(anon.json.code, 'AUTH_REQUIRED');
 });
 
-test('PAYMENTS_REQUIRED gates non-subscribed users but allows trialing demo users', async () => {
+test('PAYMENTS_REQUIRED gates non-subscribed users', async () => {
   process.env.PAYMENTS_REQUIRED = 'true';
   try {
     const free = await request(base, 'POST', '/api/daily', { cookie: userCookie, body: {} });
     assert.equal(free.status, 402);
     assert.equal(free.json.code, 'SUBSCRIPTION_REQUIRED');
-
-    const demo = await request(base, 'POST', '/api/auth/demo');
-    assert.equal(demo.status, 201);
-    const demoRes = await request(base, 'POST', '/api/daily', { cookie: sessionCookie(demo), body: {} });
-    assert.equal(demoRes.status, 200, 'trialing demo subscription passes the gate');
   } finally {
     process.env.PAYMENTS_REQUIRED = '';
   }

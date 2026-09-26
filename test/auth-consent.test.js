@@ -113,14 +113,6 @@ test('signin validates credentials and returns ready', async () => {
   assert.ok(sessionCookie(ok), 'session cookie issued');
 });
 
-test('demo login creates a ready, trialing demo user', async () => {
-  const res = await request(base, 'POST', '/api/auth/demo');
-  assert.equal(res.status, 201);
-  assert.equal(res.json.demo, true);
-  assert.equal(res.json.ready, true);
-  assert.equal(res.json.user.subscription.status, 'trialing');
-});
-
 test('outdated terms version gates readings with 451 until consent is refreshed', async () => {
   const res = await request(base, 'POST', '/api/auth/signup', { body: valid('terms@example.com') });
   const cookie = sessionCookie(res);
