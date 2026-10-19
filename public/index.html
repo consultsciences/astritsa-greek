@@ -93,7 +93,7 @@
       <a href="#dailyPanel"><span class="nav-ico"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span><span data-i18n="navHoroscope">Ωροσκόπος</span></a>
       <a href="#numbers" data-i18n="navNumbers">Αριθμολογία</a>
       <a href="#topics"><span class="nav-ico"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1.5"/></svg></span><span data-i18n="navSources">Θέματα</span></a>
-      <a href="#pricing" data-i18n="headerPricing">Τιμολόγηση</a>
+      <a href="#pricing" data-i18n="headerPricing" hidden>Τιμολόγηση</a>
       <a href="#account" data-i18n="navAccount">Λογαριασμός</a>
       <a href="#coffee" data-i18n="navCoffee">Καφές</a>
       <a href="#oracle" data-i18n="navOracle">Oracle</a>
@@ -103,7 +103,7 @@
     <div class="auth-nav">
       <a class="pill-button" href="#account" data-i18n="headerSignin">Σύνδεση</a>
       <a class="pill-button" href="#account" data-i18n="headerSignup">Εγγραφή</a>
-      <a class="pill-button" href="#pricing" data-i18n="headerPricing">Τιμολόγηση</a>
+      <a class="pill-button" href="#pricing" data-i18n="headerPricing" hidden>Τιμολόγηση</a>
     </div>
     <button id="langToggle" class="pill-button" type="button">EN</button>
     <button id="navToggle" class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
@@ -178,7 +178,7 @@
       <div class="faq-list">
         <details open><summary data-i18n="faqQ1">Πώς παράγονται οι καθημερινές προβλέψεις;</summary><p data-i18n="faqA1">Κάθε μέρα υπολογίζουμε τις πραγματικές θέσεις των πλανητών με αστρονομικό ημερολόγιο (efemerides) και οι AI προβλέψεις συνδυάζουν αυτές τις διαμορφώσεις με τους κλασικούς αστρολογικούς κανόνες για κάθε ζώδιο και οίκο.</p></details>
         <details><summary data-i18n="faqQ2">Είναι οι προβλέψεις αποθηκευμένο ωροσκόπιο;</summary><p data-i18n="faqA2">Όχι. Οι αναγνώσεις παράγονται σε πραγματικό χρόνο από AI με βάση τον σημερινό ουρανό — δεν πρόκειται για στατικό κείμενο που επαναλαμβάνεται.</p></details>
-        <details><summary data-i18n="faqQ3">Είναι δωρεάν η Αστρίτσα;</summary><p data-i18n="faqA3">Ναι, το βασικό πακέτο με ημερήσια πρόβλεψη και αριθμολογία είναι δωρεάν. Τα πακέτα Plus και Pro ξεκλειδώνουν απεριόριστες αναγνώσεις και προηγμένα εργαλεία.</p></details>
+        <details><summary data-i18n="faqQ3">Είναι δωρεάν η Αστρίτσα;</summary><p data-i18n="faqA3">Ναι. Το προφίλ, το ιστορικό και οι σελίδες ζωδίων είναι δωρεάν. Οι AI αναγνώσεις καλύπτονται από μία ενιαία συνδρομή, όταν αυτή είναι διαθέσιμη.</p></details>
         <details><summary data-i18n="faqQ4">Χρησιμοποιούνται τα δεδομένα μου;</summary><p data-i18n="faqA4">Συλλέγουμε μόνο ό,τι χρειάζεται για τον λογαριασμό σου. Οι συναινέσεις GDPR είναι υποχρεωτικές και μπορείς ανά πάσα στιγμή να εξαγάγεις ή να διαγράψεις τα δεδομένα σου.</p></details>
       </div>
     </section>
@@ -224,15 +224,13 @@
       <div id="setupNotice" class="setup-notice"></div>
     </section>
 
-    <section id="pricing" class="glass feature-section">
+    <section id="pricing" class="glass feature-section" hidden>
       <div class="section-heading">
         <img class="orb" src="/astritsa-logo.jpg" alt="" width="48" height="48" />
-        <div><p class="eyebrow" data-i18n="pricingEyebrow">τιμολόγηση</p><h2 data-i18n="pricingTitle">Τιμολόγηση</h2></div>
+        <div><p class="eyebrow" data-i18n="pricingEyebrow">συνδρομή</p><h2 data-i18n="pricingTitle">Συνδρομή</h2></div>
       </div>
       <div class="pricing-grid">
-        <div class="pricing-card"><b data-i18n="planFree">Δωρεάν</b><p data-i18n="planFreeText">Ημερήσια πρόβλεψη και αριθμολογία</p><a class="secondary-button wide" href="#account" data-i18n="planFreeCta">Ξεκίνα δωρεάν</a></div>
-        <div class="pricing-card featured"><b data-i18n="planPlus">Plus</b><span class="price" data-i18n="pricePlus">4,99€ / μήνα</span><p data-i18n="planPlusText">Απεριόριστες AI προβλέψεις, ιστορικό και όλα τα widgets.</p><a class="primary-button wide" href="#account" data-i18n="subscribeBtn">Συνδρομή με Stripe</a></div>
-        <div class="pricing-card"><b data-i18n="planPro">Pro</b><span class="price" data-i18n="pricePro">9,99€ / μήνα</span><p data-i18n="planProText">Προσωπικός αστρολογικός οδηγός, προτεραιότητα και προηγμένη ανάλυση.</p><a class="secondary-button wide" href="#account" data-i18n="planProCta">Δες το Pro</a></div>
+        <div class="pricing-card featured"><b data-i18n="planName">Πλήρης πρόσβαση</b><span class="price" data-i18n="planPriceNote">Χρέωση μέσω Stripe</span><p data-i18n="planText">Όλες οι AI αναγνώσεις: ημερήσια, ταρώ, καφές, αριθμολογία, συμβατότητα και τάσεις.</p><a class="primary-button wide" href="#account" data-i18n="planCta">Συνδρομή με Stripe</a></div>
       </div>
     </section>
 
@@ -380,7 +378,7 @@
     "mainEntity": [
       { "@type": "Question", "name": "Πώς παράγονται οι καθημερινές προβλέψεις στην Αστρίτσα;", "acceptedAnswer": { "@type": "Answer", "text": "Κάθε μέρα υπολογίζονται οι πραγματικές θέσεις των πλανητών με αστρονομικό ημερολόγιο και οι AI προβλέψεις συνδυάζουν αυτές τις διαμορφώσεις με τους κλασικούς αστρολογικούς κανόνες για κάθε ζώδιο και οίκο." } },
       { "@type": "Question", "name": "Είναι οι προβλέψεις της Αστρίτσας αποθηκευμένο ωροσκόπιο;", "acceptedAnswer": { "@type": "Answer", "text": "Όχι. Οι αναγνώσεις παράγονται σε πραγματικό χρόνο από AI με βάση τον σημερινό ουρανό, όχι στατικό κείμενο." } },
-      { "@type": "Question", "name": "Είναι δωρεάν η Αστρίτσα;", "acceptedAnswer": { "@type": "Answer", "text": "Ναι, το βασικό πακέτο με ημερήσια πρόβλεψη και αριθμολογία είναι δωρεάν· τα Plus (4,99€/μήνα) και Pro (9,99€/μήνα) ξεκλειδώνουν περισσότερα εργαλεία." } },
+      { "@type": "Question", "name": "Είναι δωρεάν η Αστρίτσα;", "acceptedAnswer": { "@type": "Answer", "text": "Ναι. Το προφίλ, το ιστορικό και οι σελίδες ζωδίων είναι δωρεάν. Οι AI αναγνώσεις καλύπτονται από μία ενιαία συνδρομή, όταν αυτή είναι διαθέσιμη." } },
       { "@type": "Question", "name": "Πώς προστατεύονται τα προσωπικά δεδομένα στην Αστρίτσα;", "acceptedAnswer": { "@type": "Answer", "text": "Οι συναινέσεις GDPR είναι υποχρεωτικές, τα δεδομένα μπορούν να εξαχθούν ή να διαγραφούν ανά πάσα στιγμή από τον λογαριασμό, και η υπηρεσία είναι αυστηρά ψυχαγωγική για ενήλικες 18+." } }
     ]
   }
