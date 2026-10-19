@@ -3,7 +3,7 @@ const $$ = (sel) => [...document.querySelectorAll(sel)];
 
 const SP_COPY = {
   el: {
-    tagline:'AI αστρική εμπειρία, ελληνικά πρώτα', backZodiac:'Εξερεύνησε τα Ζώδια', navToday:'Σήμερα', navNumbers:'Αριθμολογία', headerPricing:'Τιμολόγηση', headerSignin:'Σύνδεση',
+    tagline:'AI αστρική εμπειρία, ελληνικά πρώτα', backZodiac:'Εξερεύνησε τα Ζώδια', navToday:'Σήμερα', navNumbers:'Αριθμολογία', headerSignin:'Σύνδεση',
     signEyebrow:'Ζώδιο', skyEyebrow:'Real-time εφήμερη', skyTitle:'Ο ουρανός σήμερα για το ζώδιό σου',
     rulersTitle:'Κυβερνήτες πλανήτες', moonTitle:'Σελήνη',
     readingEyebrow:'AI πρόβλεψη', readingTitle:'Η ημερήσια AI πρόβλεψη για το ζώδιό σου', readingBtn:'Δες την πρόβλεψη του ζωδίου', signinForReading:'Σύνδεση για πρόβλεψη',
@@ -17,7 +17,7 @@ const SP_COPY = {
     skyCacheNote:'Ουρανός πραγματικού χρόνου — ανανεώνεται κάθε 10 λεπτά.'
   },
   en: {
-    tagline:'AI astral experience, Greek first', backZodiac:'Explore the Zodiac', navToday:'Today', navNumbers:'Numerology', headerPricing:'Pricing', headerSignin:'Sign in',
+    tagline:'AI astral experience, Greek first', backZodiac:'Explore the Zodiac', navToday:'Today', navNumbers:'Numerology', headerSignin:'Sign in',
     signEyebrow:'Zodiac sign', skyEyebrow:'Real-time ephemeris', skyTitle:'Today’s sky for your sign',
     rulersTitle:'Ruling planets', moonTitle:'Moon',
     readingEyebrow:'AI reading', readingTitle:'The daily AI reading for your sign', readingBtn:'See this sign’s reading', signinForReading:'Sign in for a reading',
