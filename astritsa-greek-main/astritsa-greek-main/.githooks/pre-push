@@ -1,0 +1,5 @@
+#!/bin/sh
+# Pre-push secret scan — blocks the push if any tracked file looks like it
+# contains a credential. Installed with:
+#   git config core.hooksPath .githooks
+node scripts/scan-secrets.js --all

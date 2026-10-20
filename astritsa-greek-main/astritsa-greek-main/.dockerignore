@@ -1,0 +1,27 @@
+# Dev / local-only
+node_modules
+test
+.freebuff
+mock-ai.js
+mock-ai.log
+server.log
+*.log
+
+# Secrets & local config (use env vars / docker secrets instead)
+.env
+.env.*
+!.env.example
+
+# Data — never bake the live database into an image
+data
+
+# VCS / tooling
+.git
+.gitignore
+Dockerfile
+.dockerignore
+docker-compose.yml
+README.md
+DEPLOY.md
+ecosystem.config.js
+deploy

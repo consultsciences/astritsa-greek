@@ -1,0 +1,33 @@
+# Astritsa — Docker Compose deployment.
+#
+# Secrets live in .env.production (gitignored). Copy .env.example there and
+# fill in real values. The database (data/db.json) is kept in a named volume.
+#
+#   cp .env.example .env.production   # then edit
+#   docker compose up -d --build
+#
+# The Dockerfile's HEALTHCHECK doubles as the Compose healthcheck.
+
+services:
+  astritsa:
+    build: .
+    image: astritsa:latest
+    container_name: astritsa
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000" # bind locally; expose via your reverse proxy
+    env_file:
+      - .env.production
+    environment:
+      NODE_ENV: production
+    volumes:
+      - astritsa-data:/app/data
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/api/health"]
+      interval: 30s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+
+volumes:
+  astritsa-data:

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://astritsa.com/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://astritsa.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://astritsa.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://astritsa.com/refund.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://astritsa.com/zodiac</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://astritsa.com/zodiac/aries</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://astritsa.com/zodiac/taurus</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://astritsa.com/zodiac/gemini</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://astritsa.com/zodiac/cancer</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://astritsa.com/zodiac/leo</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://astritsa.com/zodiac/virgo</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://astritsa.com/zodiac/libra</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://astritsa.com/zodiac/scorpio</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://astritsa.com/zodiac/sagittarius</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://astritsa.com/zodiac/capricorn</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://astritsa.com/zodiac/aquarius</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://astritsa.com/zodiac/pisces</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+</urlset>

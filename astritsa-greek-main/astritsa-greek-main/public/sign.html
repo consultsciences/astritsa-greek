@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#24113f" />
+  <title>Astritsa — Ζώδιο</title>
+  <meta name="description" content="Ημερήσια AI πρόβλεψη για το ζώδιό σου με πραγματικό αστρικό ημερολόγιο, αναδρόμους και φάση σελήνης." />
+  <link rel="canonical" href="https://astritsa.com/zodiac" />
+  <meta property="og:site_name" content="Astritsa" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="el_GR" />
+  <meta property="og:image" content="https://astritsa.com/astritsa-logo.jpg" />
+  <link rel="icon" type="image/jpeg" href="/astritsa-logo.jpg" />
+  <link rel="apple-touch-icon" href="/astritsa-logo.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="sign-page">
+  <div class="stars" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Astritsa home">
+      <img class="brand-mark" src="/astritsa-logo.jpg" alt="Astritsa logo" width="46" height="46" />
+      <span><strong>Astritsa</strong><small data-sp="tagline">AI αστρική εμπειρία, ελληνικά πρώτα</small></span>
+    </a>
+    <nav id="mainNav" class="nav" aria-label="Sign navigation">
+      <a href="/#zodiac" data-sp="backZodiac">Εξερεύνησε τα Ζώδια</a>
+      <a href="/#dailyPanel" data-sp="navToday">Σήμερα</a>
+      <a href="/#numbers" data-sp="navNumbers">Αριθμολογία</a>
+
+    </nav>
+    <div class="auth-nav">
+      <a class="pill-button" href="/#account" data-sp="headerSignin">Σύνδεση</a>
+    </div>
+    <button id="langToggle" class="pill-button" type="button">EN</button>
+    <button id="navToggle" class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="glass feature-section sign-hero">
+      <div class="sign-hero-head">
+        <span id="signGlyph" class="sign-glyph-big">✦</span>
+        <div>
+          <p class="eyebrow" data-sp="signEyebrow">Ζώδιο</p>
+          <h1 id="signName" class="sign-name">—</h1>
+          <p id="signRange" class="sign-range"></p>
+        </div>
+        <div id="signChips" class="sign-chips"></div>
+      </div>
+
+      <div class="section-heading">
+        <span class="orb">🪐</span>
+        <div><p class="eyebrow" data-sp="skyEyebrow">Real-time εφήμερη</p><h2 data-sp="skyTitle">Ο ουρανός σήμερα για το ζώδιό σου</h2></div>
+      </div>
+      <p id="skyNote" class="disclaimer"></p>
+      <div id="skyGrid" class="sky-grid"></div>
+
+      <div class="sign-lower">
+        <div class="panel-card">
+          <h3 data-sp="rulersTitle">Επίτροποι πλανήτες</h3>
+          <div id="rulersBox" class="rulers-box"></div>
+        </div>
+        <div class="panel-card">
+          <h3 data-sp="moonTitle">Σελήνη</h3>
+          <div id="moonBox" class="moon-box"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass feature-section">
+      <div class="section-heading">
+        <span class="orb">🔮</span>
+        <div><p class="eyebrow" data-sp="readingEyebrow">AI πρόβλεψη</p><h2 id="readingTitle" data-sp="readingTitle">Η ημερήσια AI πρόβλεψη για το ζώδιό σου</h2></div>
+      </div>
+      <div class="sign-reading-actions">
+        <button id="signReadingBtn" class="primary-button" type="button" data-sp="readingBtn">Δες την πρόβλεψη του ζωδίου</button>
+        <a id="signSigninLink" class="secondary-button" href="/#account" hidden data-sp="signinForReading">Σύνδεση για πρόβλεψη</a>
+      </div>
+      <div id="signReading" class="reading-content empty"></div>
+    </section>
+
+    <section class="glass feature-section">
+      <div class="section-heading">
+        <span class="orb">✨</span>
+        <div><p class="eyebrow" data-sp="allSignsEyebrow">Ζώδια</p><h2 data-sp="allSignsTitle">Δες άλλο ζώδιο</h2></div>
+      </div>
+      <div id="allSigns" class="zodiac-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer"><span class="footer-brand"><img src="/astritsa-logo.jpg" alt="" width="22" height="22" /> Astritsa</span><span data-sp="footerText">Πρωτότυπη AI εφαρμογή ψυχαγωγίας</span></footer>
+  <div class="site-disclaimer" data-sp="legalNote">Οι AI προβλέψεις, η αστρολογία, η καφεμαντεία, η αριθμολογία και οι κάρτες oracle παρέχονται αποκλειστικά ως ψυχαγωγικό περιεχόμενο και δεν αποτελούν ιατρική, ψυχολογική, νομική, οικονομική ή άλλη επαγγελματική συμβουλή.</div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/sign.js"></script>
+</body>
+</html>

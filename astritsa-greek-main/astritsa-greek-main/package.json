@@ -1,0 +1,27 @@
+{
+  "name": "astritsa",
+  "version": "1.0.0",
+  "description": "Astritsa — Greek-first astrology, coffee cup reading, numerology and cosmic entertainment full-stack web app.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "astrology",
+    "greek",
+    "coffee-reading",
+    "numerology",
+    "full-stack"
+  ],
+  "author": "Arena.ai Agent Mode",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "astronomy-engine": "^2.1.19",
+    "sanitize-html": "^2.17.7"
+  }
+}

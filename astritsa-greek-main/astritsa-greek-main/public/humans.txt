@@ -1,0 +1,7 @@
+Astritsa — https://astritsa.com
+
+Team: Athan (founder & developer)
+Stack: Node.js (node:http), vanilla JS frontend, astronomy-engine ephemeris, AI readings pipeline.
+Site: Greek-first astrology entertainment for adults 18+.
+
+Contact: via the in-app support form (https://astritsa.com/#contact) or the footer support section.
